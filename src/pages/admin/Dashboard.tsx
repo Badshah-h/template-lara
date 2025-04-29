@@ -737,6 +737,41 @@ const Dashboard = () => {
           </Tabs>
         </main>
       </div>
+
+      {/* Professional Footer */}
+      <footer className="border-t py-6 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <div className="flex items-center gap-2">
+              <MessageSquare className="h-5 w-5 text-primary" />
+              <span className="text-sm font-medium">AI Chat Widget</span>
+            </div>
+
+            <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-muted-foreground">
+              <a href="#" className="hover:text-primary transition-colors">
+                Documentation
+              </a>
+              <a href="#" className="hover:text-primary transition-colors">
+                API
+              </a>
+              <a href="#" className="hover:text-primary transition-colors">
+                Support
+              </a>
+              <a href="#" className="hover:text-primary transition-colors">
+                Privacy
+              </a>
+              <a href="#" className="hover:text-primary transition-colors">
+                Terms
+              </a>
+            </div>
+
+            <div className="text-sm text-muted-foreground">
+              &copy; {new Date().getFullYear()} AI Chat Widget. All rights
+              reserved.
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 };
