@@ -41,10 +41,28 @@ const Home = () => {
             Embed AI-powered chat on your website in minutes. Connect with your visitors, answer questions, and provide support 24/7.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="gap-2">
+            <Button 
+              size="lg"
+              className="gap-2 bg-gradient-to-r from-purple-600 to-blue-500 hover:from-purple-700 hover:to-blue-600"
+              onClick={() => window.location.href = '/register'}
+            >
               Get Started <ArrowRight className="h-4 w-4" />
             </Button>
-            <Button size="lg" variant="outline" className="gap-2">
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="gap-2 border-primary hover:bg-primary/10"
+              onClick={() => {
+                const demoSection = document.getElementById('demo');
+                if (demoSection) {
+                  demoSection.scrollIntoView({ behavior: 'smooth' });
+                  demoSection.classList.add('ring-4', 'ring-primary', 'ring-opacity-50');
+                  setTimeout(() => {
+                    demoSection.classList.remove('ring-4', 'ring-primary', 'ring-opacity-50');
+                  }, 2000);
+                }
+              }}
+            >
               View Demo <Code className="h-4 w-4" />
             </Button>
           </div>
@@ -233,7 +251,13 @@ function App() {
           <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
             Get started with our AI chat widget today and provide instant support to your visitors.
           </p>
-          <Button size="lg">Create Your Chat Widget</Button>
+          <Button 
+            size="lg" 
+            className="bg-gradient-to-r from-purple-600 to-blue-500 hover:from-purple-700 hover:to-blue-600 shadow-lg hover:shadow-xl transition-all duration-300"
+            onClick={() => window.location.href = '/register'}
+          >
+            Create Your Chat Widget
+          </Button>
         </div>
       </section>
 

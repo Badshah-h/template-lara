@@ -41,13 +41,13 @@ const Dashboard = () => {
 
   return (
     <div className="min-h-screen bg-background p-6">
+      <div className="min-w-[20px] w-[100px] h-[100px]"></div>
       <header className="mb-8">
         <h1 className="text-3xl font-bold tracking-tight">Admin Dashboard</h1>
         <p className="text-muted-foreground mt-2">
           Configure and manage your AI chat widget
         </p>
       </header>
-
       <div className="flex flex-col lg:flex-row gap-8">
         <aside className="lg:w-64 space-y-6">
           <Card>
